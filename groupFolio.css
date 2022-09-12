@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Poppins:wght@200;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --font-Ant: 'Antonio', sans-serif;  /* 500 */
+    --font-Pop: 'Poppins', sans-serif;  /* 200, 300, 400 */ 
+}
+
+body{
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+ text-decoration: none;
+}
+.tabs {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ width: 100vw;
+ position: relative;
+ background: #eee;
+ text-align: center;
+ padding: 0 2em;
+}
+
+.in-slide {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: #eee;
+    text-align: center;
+    padding: 0 2em;
+}
+h1{
+ font-size: 2rem;
+ margin: 0;
+ letter-spacing: 1rem;
+}
+h3{
+ font-size: 1rem;
+ letter-spacing: 0.3rem;
+ opacity: 0.6;
+}
+.container{
+ display: flex;
+ flex-direction: row;
+ position: fixed;
+ bottom: 0;
+ width: 100vw;
+ height: 70px;
+ box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+ background: #fff;
+ z-index: 10;
+}
+.container--top{
+ position: fixed;
+ top: 0;
+}
+.in-tab{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex: 1;
+ color: #000;
+ text-transform: uppercase;
+ letter-spacing: 0.1rem;
+ /* transition: all 0.5s ease; */
+ font-size: 0.8rem;
+}
+ .in-tab:hover{
+  color: white;
+  background: rgba(102, 177, 241, 0.8);
+  transition: all 0.5s ease;
+ }
+.in-tab-slider{
+ position: absolute;
+ bottom: 0;
+ width: 0;
+ height: 6px;
+ background: #eee;
+ transition: left 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+.profile {
+    width: 100vw;
+    height: 100vh;
+    padding: 30px 0;
+    /* border: 1px solid red; */
+}
+
+.inner-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* height: 500px; */
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+.col-1 {
+    flex-basis: 50%;
+    padding-top: 20px;
+}
+
+.col-2 {
+    flex-basis: 40%;
+    padding: 20px;
+}
+
+.col-1 span {
+    margin-bottom: 20px;
+    display: block;
+    font-family: var(--font-Pop);
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    color: rgba(0, 0, 0, 0.8);
+
+}
+
+.col-1 h2 {
+    font-size: 42px;
+    line-height: 50px;
+    font-family: var(--font-Ant);
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgba(38, 38, 116, 1);
+    letter-spacing: 0.06em;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.col-1 h2:hover {
+    color: #ff436a;
+    transition: 1s;
+}
+
+.col-1 p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 20px 0;
+    text-align: justify;
+    cursor: pointer;
+}
+
+.col-1 p:hover {
+    color: rgba(38, 38, 116, 1);
+    transition: 1s;
+}
+
+.socials {
+    height: 40px;
+    width: 50%;
+    margin: 40px 0 80px;
+}
+
+.social-links {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.social-links:hover {
+    border: 2px solid #fafafa;
+    background-color: rgba(38, 38, 116, 1);
+    transition: 1s;
+}
+
+.col-2 .profile-img {
+    width: 100%;
+    max-height: 500px;
+    position: relative;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 3;
+    transition: 1s;
+}
+
+.profile-img:hover {
+    transform: translate(-25px, -25px);
+}
+
+.col-2 .profile-img-frame {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.animie {
+    animation: animate 1s linear forwards;
+    transition: 1s;
+}
+
+.hello.animie {
+    animation-delay: 1s;
+}
+
+.name.animie {
+    animation-delay: 1.5s;
+}
+
+p.animie {
+    animation-delay: 2s;
+}
+
+.socials.animie {
+    animation-delay: 2.5s;
+}
+
+.col-2.animie {
+    animation-delay: 3s;
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+/* media query */
+
+@media (max-width: 600px) {
+
+    .inner-container {
+        width: 90%;
+    }
+
+    .col-1, .col-2 {
+        flex-basis: 100%;
+    }
+
+    .col-2 {
+        margin-bottom: 100px;
+    }
+
+    h2, span {
+        text-align: center;
+    }
+
+    .socials {
+        width: 100%;
+    }
+
+    .container button {
+        font-size: 5px;
+        height: 40px;
+        width: 10px;
+    }
+
+    /* .container {
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        left: 0;
+    } */
+    
+}
